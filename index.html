@@ -1,25 +1,55 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>NLTK</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ssi379.GitHub.io by ssi379</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">파이썬 자연어처리</h1>
-      <h2 class="project-tagline"></h2>
-    </section>
+    <div class="wrapper">
+      <header class="without-description">
+        <h1>Ssi379.GitHub.io</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/ssi379">View the Project on GitHub <small>ssi379</small></a></p>
+        <ul>
+          <li class="single"><a href="https://github.com/ssi379/ssi379.github.io">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="preface" class="anchor" href="#preface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Preface</h1>
 
-    <section class="main-content">
-      <h1>
-<a id="자연어처리와-파이선" class="anchor" href="#%EC%96%B8%EC%96%B4%EC%B2%98%EB%A6%AC%EC%99%80-%ED%8C%8C%EC%9D%B4%EC%84%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>언어처리와 파이선</h1>
+<p>This is a book about Natural Language Processing. By "natural language" we mean a language that is used for everyday communication by humans; languages like English, Hindi or Portuguese. In contrast to artificial languages such as programming languages and mathematical notations, natural languages have evolved as they pass from generation to generation, and are hard to pin down with explicit rules. We will take Natural Language Processing — or NLP for short — in a wide sense to cover any kind of computer manipulation of natural language. At one extreme, it could be as simple as counting word frequencies to compare different writing styles. At the other extreme, NLP involves "understanding" complete human utterances, at least to the extent of being able to give useful responses to them.</p>
 
-<p>텍스트에 있는 많은 단어를 취급하는건 쉬운 일이다. 간단히 프로그램을 짤 수 있다면 과연 무엇을 할 것인가? 이번과에서는 다음과 같은 질문들을 다루어 보겠다.</p>
+<h1>
+<a id="서문" class="anchor" href="#%EC%84%9C%EB%AC%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>서문</h1>
+
+<p>...</p>
+
+<h1>
+<a id="1-language-processing-and-python" class="anchor" href="#1-language-processing-and-python" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Language Processing and Python</h1>
+
+<p>It is easy to get our hands on millions of words of text. What can we do with it, assuming we can write some simple programs? In this chapter we'll address the following questions:</p>
+
+<p>What can we achieve by combining simple programming techniques with large quantities of text?
+How can we automatically extract key words and phrases that sum up the style and content of a text?
+What tools and techniques does the Python programming language provide for such work?
+What are some of the interesting challenges of natural language processing?
+This chapter is divided into sections that skip between two quite different styles. In the "computing with language" sections we will take on some linguistically motivated programming tasks without necessarily explaining how they work. In the "closer look at Python" sections we will systematically review key programming concepts. We'll flag the two styles in the section titles, but later chapters will mix both styles without being so up-front about it. We hope this style of introduction gives you an authentic taste of what will come later, while covering a range of elementary concepts in linguistics and computer science. If you have basic familiarity with both areas, you can skip to 5; we will repeat any important points in later chapters, and if you miss anything you can easily consult the online reference material at <a href="http://nltk.org/">http://nltk.org/</a>. If the material is completely new to you, this chapter will raise more questions than it answers, questions that are addressed in the rest of this book.</p>
+
+<h1>
+<a id="1-언어처리와-파이썬" class="anchor" href="#1-%EC%96%B8%EC%96%B4%EC%B2%98%EB%A6%AC%EC%99%80-%ED%8C%8C%EC%9D%B4%EC%8D%AC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. 언어처리와 파이썬</h1>
+
+<p>텍스트에 있는 많은 단어를 취급하는건 쉬운 일이다. 우리가 어떤 간단한 프로그램을 할 수 있다면 과연 무엇을 짤 것인가 이번과에서는 다음 제시하는 질문들을 다루어 볼 것이다.     </p>
 
 <ol>
 <li>텍스트의 엄청난 양의 프로그램밍 기술을 조합하여 무엇을 만들 수 있겠는가?<br>
@@ -32,22 +62,25 @@
 </li>
 </ol>
 
-<p>이 챕터는 성격이 서로 다른 두 개의 형식으로 나누어 다룰 것이다.<br>
+<p>이 챕터는 성격이 서로 다른 두 개의 형식을 나누어 다룰 것이다.<br>
 “언어를 계산하기” 부분은 프로그램이 어떻게 동작하는지를 꼭 설명하지는 않겠지만 적극적으로 언어적으로 표현할 것이다.<br>
 “파이선을 더 가까이에서 보기” 부분에서는 우리는 체계적으로 중요 프로그램 개념을 검토할 것이다. 우리는 처음에 서로 다른 두 개의 형태의 제목으로 나누겠지만 그러나 그것에 대해 굳이 명시하지 않은 채 나중 챕터에서는 두 부분을 섞어 설명할 것이다. 이러한 방식의 도입이 언어학과 컴퓨터 과학의 기초적인 개념들을 망라하면서도 뒤에 나올 것들의 진정한 매력을 당신이 깨닫길 희망한다. 당신이 이 두 영역에 대해 기본적으로 익숙해져 있다면 챕터 5로 뛰어 넘어가도 좋다. 당신이 혹 어떤 중요한 것을 지나쳐 놓치게 되더라도 우리는 그것들을 반복할 것이고 그리고 온라인 http//nltk.org/로 들어가면 쉽게 그 부분을 확인할 수 있다. 만약 이 자료들이 당신이 처음 접하는 것이라면 챕터 1장의 내용보다 더 많은 뒤에 나오게 될 내용의 질문을 받게 될 것이다.        </p>
 
 <h2>
-<a id="1-언어로-프로그램-하기--텍스트와-단어" class="anchor" href="#1-%EC%96%B8%EC%96%B4%EB%A1%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%ED%95%98%EA%B8%B0--%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%8B%A8%EC%96%B4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. 언어로 프로그램 하기 : 텍스트와 단어</h2>
+<a id="1---computing-with-language-texts-and-words" class="anchor" href="#1---computing-with-language-texts-and-words" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1   Computing with Language: Texts and Words</h2>
+
+<p>We're all very familiar with text, since we read and write it every day. Here we will treat text as raw data for the programs we write, programs that manipulate and analyze it in a variety of interesting ways. But before we can do this, we have to get started with the Python interpreter.</p>
+
+<h2>
+<a id="1---언어를-컴퓨터로-처리하기--텍스트와-단어" class="anchor" href="#1---%EC%96%B8%EC%96%B4%EB%A5%BC-%EC%BB%B4%ED%93%A8%ED%84%B0%EB%A1%9C-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0--%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%8B%A8%EC%96%B4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1   언어를 컴퓨터로 처리하기 : 텍스트와 단어</h2>
 
 <p>사람들은 텍스트로 매우 친숙하다 왜냐하면 읽고 쓰기 때문이다. 여기서 우리는 우리가 작성하고자 하는 프로그램들을 수정하지 않은 채 취급할 것이다. 다루게 될 프로그램은 지침서를 아주 흥미롭게 조작하고 분석하게 되는 프로그램이다. 그러나 우리는 이것을 다루기 전에 파이선 해석을 먼저 시작할 것이다.</p>
-
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
+      </section>
+    </div>
+    <footer>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
